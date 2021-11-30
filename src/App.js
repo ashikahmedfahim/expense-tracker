@@ -23,9 +23,13 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const handleExpenseData = (expenseData) => {
+    expenses.push(expenseData);
+  };
   return (
     <div>
-      <NewExpense />
+      <NewExpense onExpenseDataSave={handleExpenseData} />
       <Expense expenses={expenses} />
     </div>
   );
