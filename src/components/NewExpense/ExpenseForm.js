@@ -19,7 +19,7 @@ const ExpenseForm = (props) => {
     setForm((prevState) => {
       return {
         ...prevState,
-        amount: event.target.value,
+        amount: +event.target.value,
       };
     });
   };
